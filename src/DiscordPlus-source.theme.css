@@ -1332,38 +1332,16 @@ margin-right: 0;
 .avatar__07f91 {border-radius: var(--dplus-radius-avatar);}
 
 		/*--- 14 Settings ---*/
-/* ========================== */
-/* Discord+ Frosted Glass Theme (from your snippet) */
-/* ========================== */
-
-/* Make main containers transparent */
-.layer__960e4, 
-.standardSidebarView__23e6b, 
-.contentRegionScroller__23e6b, 
-.sidebarRegionScroller__23e6b, 
-.visual-refresh .standardSidebarView__23e6b {
-	background-color: transparent !important;
-}
-
-/* Column layout fixes */
-.customColumn__23e6b, 
-.contentColumn__23e6b {
+.layer__960e4, .standardSidebarView__23e6b, .contentRegionScroller__23e6b, .sidebarRegionScroller__23e6b, .visual-refresh .standardSidebarView__23e6b {background-color: transparent!important;}
+.customColumn__23e6b, .contentColumn__23e6b {
 	max-width: 100%;
 }
-
-/* Sidebar sizing */
 .sidebarRegion__23e6b {
 	max-width: 218px;
 	margin-right: var(--dplus-spacing-app);
 }
-.sidebarRegion__23e6b .sidebar__23e6b {
-	max-width: 218px;
-}
-
-/* Header text overflow */
-.headerText_b3f026 { overflow: hidden; }
-
-/* Content region sizing */
+.sidebarRegion__23e6b .sidebar__23e6b {max-width: 218px;}
+.headerText_b3f026 {overflow: hidden;}
 .standardSidebarView__23e6b .contentRegion__23e6b {
 	max-width: 100%;
 }
@@ -1371,31 +1349,40 @@ margin-right: 0;
 .standardSidebarView__23e6b .sidebarRegion__23e6b .sidebar {
 	padding-top: 45px;
 }
-
-/* Sidebar padding */
 .sidebar__23e6b {
-	padding: calc(30px + var(--dplus-spacing-ui)) var(--dplus-spacing-ui) var(--dplus-spacing-ui) calc(var(--dplus-spacing-ui) * 2);
+	padding: calc(30px + var(--dplus-spacing-ui)) var(--dplus-spacing-ui) var(--dplus-spacing-ui) calc(var(--dplus-spacing-ui) * 2)
 }
-
-/* Content padding */
 .contentColumnDefault__23e6b {
 	padding: calc(30px + var(--dplus-spacing-ui)) calc(var(--dplus-spacing-ui) * 2) calc(var(--dplus-spacing-ui) * 2);
 }
-
-/* Horizontal spacing fixes */
-.horizontal__7c0ba > .flex__7c0ba,
-.horizontal__7c0ba > .flexChild__7c0ba {
+.horizontal__7c0ba>.flex__7c0ba, .horizontal__7c0ba>.flexChild__7c0ba {
 	margin-left: var(--dplus-spacing-ui);
 }
 
-/* Margins */
-.marginBottom8_fd297e { margin-bottom: var(--dplus-spacing-ui); }
-.marginBottom40_fd297e { margin-bottom: calc(10px + var(--dplus-spacing-ui)); }
-.marginTop40_fd297e { margin-top: calc(10px + var(--dplus-spacing-ui)); }
+.marginBottom8_fd297e {
+	margin-bottom: var(--dplus-spacing-ui);
+}
+.marginBottom40_fd297e {
+	margin-bottom: calc(10px + var(--dplus-spacing-ui));
+}
+.marginTop40_fd297e {
+	margin-top: calc(10px + var(--dplus-spacing-ui));
+}
 
-/* User-settings positioning */
-.platform-osx [id="user-settings"],
-.platform-win [id="user-settings"],
+.platform-osx [id="user-settings"] {
+	left: -5px !important;
+	top: -5px !important;
+	right: -5px !important;
+	bottom: -5px !important;
+}
+
+.platform-win [id="user-settings"] {
+	left: -5px !important;
+	top: -27px !important;
+	right: -5px !important;
+	bottom: -5px !important;
+}
+
 .platform-linux [id="user-settings"] {
 	left: -5px !important;
 	top: -5px !important;
@@ -1403,39 +1390,11 @@ margin-right: 0;
 	bottom: -5px !important;
 }
 
-/* ========================== */
-/* Frosted Glass Overrides for Panels */
-/* ========================== */
-:root {
-	--dplus-bgc-ui-base: rgba(20, 20, 20, 0.8) !important;
-	--dplus-bgc-button: rgba(20, 20, 20, 0.75) !important;
-	--dplus-bgc-radiobar-hover: rgba(20, 20, 20, 0.75) !important;
-	--dplus-bgc-radiobar-selected: rgba(20, 20, 20, 0.8) !important;
-}
-
-/* Apply blur to main settings containers */
 #app-mount .standardSidebarView__23e6b .contentRegion__23e6b,
 #app-mount .standardSidebarView__23e6b .sidebarRegion__23e6b {
-	backdrop-filter: blur(12px) !important;
-	border-radius: 12px !important;
+	background-color: var(--dplus-bgc-ui-base);
+	border-radius: var(--dplus-radius-ui);
 }
-
-/* Button and radiobar styling */
-#app-mount .closeButton_c2b141,
-#app-mount .closeButton_c2b141.item-2idW98,
-.cardPrimary-3qRT__,
-.cardPrimaryOutline-1ofwVz {
-	background-color: var(--dplus-bgc-button) !important;
-	border-radius: var(--dplus-radius-ui) !important;
-	transition: var(--dplus-anim-button) !important;
-}
-
-/* Button hover states */
-#app-mount .closeButton_c2b141:hover { background-color: var(--dplus-bgc-button-hover) !important; }
-#app-mount .closeButton_c2b141 path { fill: var(--dplus-accent-ui) !important; }
-#app-mount .closeButton_c2b141:hover path { fill: white !important; }
-
-/* Transition fixes */
 #app-mount .standardSidebarView__23e6b .contentRegion__23e6b,
 #app-mount .standardSidebarView__23e6b .sidebarRegion__23e6b,
 .itemDefault-3Jdr52,
@@ -1445,12 +1404,36 @@ margin-right: 0;
 #app-mount .side-2ur1Qk .itemHover-EnbcjT:hover,
 #app-mount #bd-settings-sidebar .ui-tab-bar-item:hover,
 #app-mount .closeButton_c2b141 {
-	transition-property: background-color !important;
-	transition-duration: var(--dplus-anim-short) !important;
+	transition-property: background-color;
+	transition-duration: var(--dplus-anim-short);
+}
+.cardPrimary-3qRT__, .cardPrimaryOutline-1ofwVz {
+	background-color: var(--dplus-bgc-button);
+	border-radius: var(--dplus-radius-ui);
 }
 
-/* Overflow fix for headers */
+#app-mount .closeButton_c2b141 {
+	border-color: var(--dplus-accent-ui);
+	border-radius: var(--dplus-radius-ui);
+	&:hover {background-color: var(--dplus-bgc-button-hover);}
+	& path {fill: var(--dplus-accent-ui)!important;}
+	&:hover path {fill: white}
+	& + .keybind_c2b141 {color: var(--text-normal)!important;}
+}
+#app-mount .closeButton_c2b141
+.item-2idW98 {
+	background-color: var(--dplus-bgc-ui-base);
+	transition: var(--dplus-anim-button);
+	border-radius: var(--dplus-radius-ui);
+	&:hover:not([aria-checked=true]) {
+		background-color: var(--dplus-bgc-radiobar-hover);
+	}
+	&[aria-checked=true] {
+		background-color: var(--dplus-bgc-radiobar-selected);
+	}
+}
 .headerText_b3f026 { overflow-x: clip; }
+
 /* My Account */
 .settingsBanner_c3e427 {
 	width: 100%;
